@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRPC Project</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <style>
+
+        /* Wrapper for content */
+        .content {
+            text-align: center;  /* Center text inside the wrapper */
+            padding: 20px;
+            background-color: #05111f;  /* White background */
+            border-radius: 10px;  /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* Drop shadow */
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            gap: 20px;
+        }
+
+    </style>
+</head>
+<body class="home">
+
+    <h1>Home</h1>
+    <p id="currentDate"></p>
+
+    <div class='content'>
+    <!-- Button to trigger the JavaScript function -->
+     <button onclick="window.location.href='ViewForms.html'">View Forms</button>
+     <button onclick="window.location.href='NewForm.html'">New Forms</button>
+    </div>
+
+    <!-- Link to your JavaScript file -->
+    <script src="../app.js"></script>
+</body>
+</html>

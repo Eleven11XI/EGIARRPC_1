@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRPC Project</title>
+    <link rel="stylesheet" href="../Styles/style.css">
+    <style>
+        h1{
+            position: fixed;
+            top: 0px;
+
+        }
+        .content {
+            text-align: center;
+            background-color: #05111f;
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+        }
+        button  {
+            padding: 40px 80px;
+        }
+        input {
+            position: fixed;
+            top: 40%;
+            width: 200px; /* Set a fixed width */
+            padding: 10px; /* Add some padding */
+            font-size: 24px; /* Bigger text */
+        }
+    </style>
+</head>
+<body class="view">
+
+    <h1>View Forms</h1>
+
+    <div class="input-container-view">
+        <input type="password" id="pinID" placeholder="Enter Pin">
+        <p id="displayText"></p> <!-- Displays entered text -->
+    </div>
+
+    <div class="content">
+        <button onclick="testPassword()">Submit</button>
+    </div>
+    
+    <button-back onclick="window.location.href='Home.html'">Back</button-back>
+
+    <script src="../app.js"></script>
+</body>
+</html>

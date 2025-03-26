@@ -1,0 +1,208 @@
+/* styles.css */
+body {
+    background-color: #58def0;
+    display: grid;             /* Turn body into a grid container */
+    place-items: center;       /* Center content both horizontally and vertically */
+    height: 100vh;             /* Make body take the full height of the viewport */
+    margin: 0;                 /* Remove default margin */
+    font-family: Arial, sans-serif; /* Font style */
+}
+
+h1 {
+    color: #202020;  /* Dark text color */
+    font-weight: bold;
+    font-size: 70px;
+}
+
+#currentDate {
+    position: absolute;
+    color: #000000; /* Dark text color */
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.home #currentDate {
+    top: 0px;
+    right: 20px;
+}
+
+.new #currentDate {
+    bottom: 0px;
+    right: 30%;
+}
+
+.open #currentDate {
+    top: 0px;
+    right: 20px;
+}
+
+button {
+    padding: 50px 70px;
+    font-size: 40px;
+    background-color: #ffffff;  /* Green background */
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 20px;
+}
+
+button:hover {
+    background-color: #dadada;  /* Darker green on hover */
+}
+
+button-back {
+    padding: 15px 32px;
+    font-size: 20px;
+    background-color: #aaaaaa; /* Grey background color */
+    color: rgb(0, 0, 0); /* Dark text color */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transition: background-color 0.3s;
+}
+
+button-back:hover {
+    background-color: #888888; /* Darker grey on hover */
+}
+
+button-submit {
+    padding: 15px 32px;
+    font-size: 20px;
+    background-color: #baaaf5; /* Grey background color */
+    color: rgb(0, 0, 0); /* Dark text color */
+    border: 3px solid #202020; /* Border color */
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: background-color 0.3s;
+}
+
+button-submit:hover {
+    background-color: #987dfa; /* Darker grey on hover */
+}
+
+input {
+    width: 20px; /* Set a fixed width */
+    padding: 10px; /* Add some padding */
+    border: 3px solid #05111f; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Bigger text */
+    text-align: center; /* Center text inside input */
+    outline: none; /* Removes default focus outline */
+    transition: border-color 0.3s; /* Smooth transition */
+}
+
+input:focus {
+    border-color: #007bff; /* Change border color when clicked */
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.5); /* Add glowing effect */
+}
+
+/* Center input and button */
+.input-container-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Space above the input and button */
+}
+
+.input-container-newedit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto; /* Two rows for input and description */
+    gap: 20px; /* Space between grid items */
+    width: 60%;
+    margin: auto;
+    align-items: start; /* Align items to the start of the grid cell */
+}
+
+.input-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the input fields */
+}
+
+input[type="number"]{
+    height: 30px;
+    width: 90%;
+    padding: 10px; /* Add some padding */
+    border: 4px solid #585858; /* Border color */
+    border-radius: 5px;
+    text-align: center;
+    background-color: aliceblue;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    height: 150px; /* Set a fixed height for the textarea */
+    width: 90%;
+    padding: 10px; /* Add some padding */
+    border-radius: 5px;
+    text-align: left;
+    background-color: aliceblue;
+    font-family: Arial, sans-serif;
+}
+
+#DescriptionID {
+    border: 8px solid #850404; /* Border color */
+}
+
+#CommentID {
+    border: 4px solid #585858; /* Border color */
+}
+
+#ImageID {
+    border: 4px solid #585858; /* Border color */
+}
+
+.textarea-wrapper {
+    align-self: end; /* Align the description input to the end of the grid item */
+    width: 100%;
+}
+
+#formSelect {
+    background-color: #f1f1f1;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#formSelect:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+#formSelect option {
+    padding: 8px 10px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+}
+
+#formSelect option:checked {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#reqFields {
+    font-family: Arial, sans-serif;
+    color: maroon;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0px;
+    left: 30%;
+}

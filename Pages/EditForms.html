@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRPC Project</title>
+    <link rel="stylesheet" href="../Styles/style.css">
+    <style>
+        h1 {
+            position: fixed;
+            top: 0px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        input[type="text"], input[type="date"], input[type="email"]{
+            height: 30px;
+            width: 90%;
+            padding: 10px; /* Add some padding */
+            border: 8px solid #850404; /* Border color */
+            border-radius: 5px;
+            text-align: center;
+            background-color: aliceblue;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body class="new">
+
+    <h1>Edit Form</h1>
+    <p id="currentDate"></p>
+    <button-back onclick="window.location.href='OpenForms.html'">Back</button-back>
+
+    <button-submit onclick="window.location.href='OpenForms.html'">Submit</button-submit>
+
+    <div class="input-container-newedit">
+        <div class="input-wrapper">
+            <input type="email" id="TitleID" placeholder="Title">
+        </div>
+
+        <div class="input-wrapper">
+            <input type="text" id="EmailID" placeholder="Email">
+        </div>
+    
+        <div class="input-wrapper textarea-wrapper">
+            <textarea id="DescriptionID" placeholder="Description"></textarea>
+        </div>
+
+        <div class="input-wrapper textarea-wrapper">
+            <textarea id="CommentID" placeholder="Comments"></textarea>
+        </div>
+        
+        <div class="input-wrapper">
+            <input type="number" id="BudgetID" placeholder="Budget">
+        </div>
+
+        <div class="input-wrapper">
+            <input type="number" id="PriorityID" placeholder="Priority (1 most - 5 least)">
+        </div>
+
+        <div class="input-wrapper">
+            <input type="date" id="DateID">
+        </div>
+
+        <div class="input-wrapper">
+            <input type="text" id="ImageID" placeholder="Url to Google Drive with Images">
+        </div>
+
+        <div class="input-wrapper">
+            <p> ^ Completion Date ^ </p>
+        </div>
+
+        <div class="input-wrapper">
+            <p> ^ Set the Drive to anybody with the link ^ </p>
+        </div>
+    </div>
+
+    <script src="../app.js"></script> 
+</body>
+</html>

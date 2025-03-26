@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRPC Project</title>
+    <link rel="stylesheet" href="../Styles/style.css">
+    <style>
+        h1 {
+            position: fixed;
+            top: 0px;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .content {
+            text-align: center;
+            background-color: #05111f;
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+        }
+        table {
+            width: 80%;
+            background-color: aliceblue;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        table, th, td {
+            border: 2px solid rgb(0, 0, 0);
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #d8a7f5;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body class="open">
+
+    <h1>Open Forms</h1>
+
+    <button-back onclick="window.location.href='Home.html'">Back</button-back>
+    
+    <p id="currentDate"></p>
+
+    <!-- Dropdown to select a form -->
+    <label for="formSelect">Select a Form:</label>
+    <select id="formSelect">
+        <option value="">-- Choose a Form --</option>
+    </select>
+
+    <button id="editButton" onclick="editSelectedForm()" disabled>Edit Form</button>
+
+    <!-- Table to display only the 3 most recent forms -->
+    <table id="formsTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Priority</th>
+                <th>Completion Date</th>
+                <th>Date Added</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <!-- Link to the external app.js script -->
+    <script src="../app.js"></script>
+</body>
+</html>
