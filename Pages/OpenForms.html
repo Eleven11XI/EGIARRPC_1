@@ -35,8 +35,9 @@
             border: 2px solid rgb(0, 0, 0);
         }
         th, td {
-            padding: 10px;
+            padding: 20px;
             text-align: center;
+            border-radius: 5px;
         }
         th {
             background-color: #d8a7f5;
@@ -63,6 +64,8 @@
     </select>
 
     <button id="editButton" onclick="editSelectedForm()" disabled>Edit Form</button>
+    <!-- Delete Button -->
+    <button id="deleteButton" onclick="deleteSelectedForm()" disabled>Delete Form</button>
 
     <!-- Table to display only the 3 most recent forms -->
     <table id="formsTable">

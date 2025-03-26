@@ -5,6 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RRPC Project</title>
     <link rel="stylesheet" href="../Styles/style.css">
+    <script>
+                // Get taskId from the URL
+                function getTaskIdFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('taskId'); // Extract taskId from URL
+        }
+
+        // Fetch form data from the server using taskId
+        function fetchFormData() {
+            const taskId = getTaskIdFromURL(); // Get taskId from URL
+            if (!taskId) {
+                console.error('No taskId found in the URL.');
+                return;
+            }
+
+            fetch(`http://localhost:3000/form/${taskId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data) {
+                        // Auto-populate the fields with the data
+                        document.getElementById("TitleID").value = data.title;
+                        document.getElementById("EmailID").value = data.email;
+                        document.getElementById("DescriptionID").value = data.description;
+                        document.getElementById("CommentID").value = data.comment;
+                        document.getElementById("BudgetID").value = data.budget;
+                        document.getElementById("PriorityID").value = data.priority;
+                        document.getElementById("DateID").value = data.completion;
+                        document.getElementById("ImageID").value = data.imageURL;
+                        document.getElementById("currentDate").textContent = data.dateAdded;
+                    } else {
+                        console.error('Form not found.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching form data:', error);
+                });
+        }
+
+        // Call fetchFormData when the page loads
+        document.addEventListener("DOMContentLoaded", function() {
+            fetchFormData();
+        });
+    </script>
     <style>
         h1 {
             position: fixed;
@@ -32,15 +75,15 @@
     <p id="currentDate"></p>
     <button-back onclick="window.location.href='OpenForms.html'">Back</button-back>
 
-    <button-submit onclick="window.location.href='OpenForms.html'">Submit</button-submit>
+    <button-submit id="submitButtonEdit">Submit</button-submit>
 
     <div class="input-container-newedit">
         <div class="input-wrapper">
-            <input type="email" id="TitleID" placeholder="Title">
+            <input type="text" id="TitleID" placeholder="Title">
         </div>
 
         <div class="input-wrapper">
-            <input type="text" id="EmailID" placeholder="Email">
+            <input type="email" id="EmailID" placeholder="Email">
         </div>
     
         <div class="input-wrapper textarea-wrapper">
